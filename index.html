@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bookmark</title>
+    <!-- google fonts files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.css" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <main class="main-body py-5 position-relative">
+        <div class="container d-flex align-items-center flex-column justify-content-center ">
+            <h1 class=" main-title position-relative z-3 py-2">Bookmarker</h1>
+            <div class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkName" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                    <input oninput="Validate(nameRegex,bookmarkNameInput);" type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName" />
+                </div>
+
+                <div class="site-url w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkURL" class="pb-2 fw-semibold"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input oninput="Validate(urlRegex,bookmarkURLInput);" type="url" placeholder="Website URL" class="form-control" id="bookmarkURL" />
+                </div>
+                <button onclick="addBookMark();" class="btn btn-info text-white px-5" id="submitBtn">Submit</button>
+            </div>
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <th class="text-capitalize">index</th>
+                    <th class="text-capitalize">Website Name</th>
+                    <th class="text-capitalize">Visit</th>
+                    <th class="text-capitalize">Delete</th>
+                </thead>
+                <tbody id="data">
+                  
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
